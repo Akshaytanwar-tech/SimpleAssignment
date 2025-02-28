@@ -4,6 +4,7 @@ import fetchProducts from "../../Apis/fetchProducts";
 import fetchCategories from "../../Apis/fetchCategories";
 import Filter from "../FilterProduct/Filter";
 import { useNavigate } from "react-router-dom";
+import ArrangeProduct from "../ArrangeProduct/ArrangeProduct";
 const Products = () => {
   const [products, setproducts] = useState([]);
   const [categories, setcategories] = useState([]);
@@ -91,6 +92,13 @@ const Products = () => {
                       </p>
                     );
                   })}
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <h5 class="fw-bold">Arrange Products</h5>
+              <div class="price-filter">
+                <ArrangeProduct setproducts={setproducts} />
               </div>
             </div>
 
